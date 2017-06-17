@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<woss>
+	<gather class="com.briup.gather.Gather">
+		<path>src/radwtmp_test</path>
+	</gather>
+	<client class="com.briup.bean.ClientImpl">
+		<ip>127.0.0.1</ip>
+		<port>9999</port>
+	</client>
+	<server class="com.briup.bean.ServerImpl">
+		<port>9999</port>
+	</server>
+	<dbstore class="com.briup.bean.DBImple">
+		<driver>oracle.jdbc.driver.OracleDriver</driver>
+		<url>jdbc:oracle:thin:@127.0.0.1:152:XE</url>
+		<username>oracle</username>
+		<password>oracle</password>
+	</dbstore>
+</woss>

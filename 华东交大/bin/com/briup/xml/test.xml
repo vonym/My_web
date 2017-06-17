@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- <!DOCTYPE students SYSTEM "test.dtd"> -->
+<!DOCTYPE students[
+<!ELEMENT students ANY>
+<!ELEMENT student (name+,age?,gender,address*,score,study)>
+<!ELEMENT name ((fname,lname)|(lname,fname))>
+<!ELEMENT fname (#PCDATA)>
+<!ELEMENT lname EMPTY>
+<!ELEMENT age (#PCDATA)>
+<!ELEMENT address (#PCDATA|city)*>
+<!ATTLIST student id ID #REQUIRED>
+<!ATTLIST name value CDATA #IMPLIED>
+<!ATTLIST gender value (male|female) "male">
+<!ATTLIST score grade (low|middle|high) #REQUIRED>
+<!ATTLIST score passed CDATA #FIXED "60">
+<!ENTITY address "南昌青山湖区双港东大街">]>
+<students>
+	<class id="华东交大">
+		<!-- <student id="1"> <name>tom</name> <age>20</age> <gender>male</gender> 
+			<score>90</score> <study>xml</study> <address city="南昌" /> </student> -->
+		<student id="2">
+			<name value="name">
+				<lname>tom</lname>
+				<fname></fname>
+			</name>
+			<age>22</age>
+			<gender value="female">male</gender>
+			<address>&address;
+			</address>
+			<score grade="high" passed="60">95</score>
+			<study>oracle</study>
+			
+			<![CDATA[
+			function test(a,b){
+				if(a>b)
+					alert("华东交大");
+				}]]>
+		</student>
+	</class>
+</students>

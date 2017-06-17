@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT students ANY>
+<!ELEMENT student (name+,age?,gender,address*,score,study)>
+<!ELEMENT name ((fname,lname)|(lname,fname))>
+<!ELEMENT fname (#PCDATA)>
+<!ELEMENT lname EMPTY>
+<!ELEMENT age (#PCDATA)>
+<!ELEMENT address (#PCDATA|city)*>
+<!ATTLIST student id ID #REQUIRED>
+<!ATTLIST name value CDATA #IMPLIED>
+<!ATTLIST gender value (male|female) "male">
+<!ATTLIST score grade (low|middle|high) #REQUIRED>
+<!ATTLIST score passed CDATA #FIXED "60">
+<!ENTITY address "南昌青山湖区双港东大街">

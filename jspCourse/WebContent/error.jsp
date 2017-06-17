@@ -1,0 +1,73 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"  %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<table border="1">
+<tr>
+	<th>
+		解释
+	</th>
+	<th>
+		错误返回值
+	</th>
+</tr>
+<tr>
+	<td>
+		该属性给一个java.lang.Integer数据类型在分析后可以被存储状态代码。
+	</td>
+	<td>
+		<%=request.getAttribute("javax.servlet.error.status_code")%>
+	</td>
+</tr>
+<tr>
+	<td>
+	该属性给出的异常类型可以存储和分析后存储java.lang.Class的数据类型
+	</td>
+	<td>
+	<%=request.getAttribute("javax.servlet.error.exception_type")%>
+	</td>
+</tr>
+<tr>
+	<td>
+	该属性给出确切的错误信息，可以存储和分析中一个java.lang.String的数据类型后存储。
+	</td>
+	<td>
+	<%=request.getAttribute("javax.servlet.error.message")%>
+	</td>
+</tr>
+<tr>
+	<td>
+	该属性给出URL调用这个servlet，它可以存储和分析中一个java.lang.String的数据类型后存储的信息。
+	</td>
+	<td>
+	<%=request.getAttribute("javax.servlet.error.request_uri")%>
+	</td>
+</tr>
+<tr>
+	<td>
+	该属性给出信息引发异常可以被存储和分析后，存储一个java.lang.Throwable数据类型。
+	</td>
+	<td>
+	<%=request.getAttribute("javax.servlet.error.exception")%>
+	</td>
+</tr>
+<tr>
+	<td>
+	此属性提供了servlet的名字，它可以存储和分析中一个java.lang.String的数据类型后存储。
+	</td>
+	<td>
+	<%=request.getAttribute("javax.servlet.error.servlet_name")%>
+	</td>
+</tr>
+<br>
+<br>
+<br>
+<br>
+</table>
+</body>
+</html>
